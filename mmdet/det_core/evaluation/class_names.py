@@ -4,6 +4,10 @@ import mmdet.cv_core
 def wider_face_classes():
     return ['face']
 
+def voc_remotesense_classes():
+    return [
+        'vehicle', 'person'
+    ]
 
 def voc_classes():
     return [
@@ -90,6 +94,7 @@ def cityscapes_classes():
 
 
 dataset_aliases = {
+    'voc_remotesense' :['voc_remotesense'],
     'voc': ['voc', 'pascal_voc', 'voc07', 'voc12'],
     'imagenet_det': ['det', 'imagenet_det', 'ilsvrc_det'],
     'imagenet_vid': ['vid', 'imagenet_vid', 'ilsvrc_vid'],

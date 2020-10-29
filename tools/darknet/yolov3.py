@@ -145,7 +145,7 @@ if __name__ == '__main__':
     import torch
 
     # darknet 权重路径 https://github.com/AlexeyAB/darknet
-    yolov3_weights_path = '/home/pi/yolo权重/yolov3/yolov3.weights'
+    yolov3_weights_path = '/home/cheng/PyTorch-YOLOv3/weights/yolov3.weights'
     
     yolov3 = YOLOV3(pretrained=yolov3_weights_path)
     new_state_dict = OrderedDict()
