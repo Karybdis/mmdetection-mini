@@ -2,7 +2,6 @@ from argparse import ArgumentParser
 
 from mmdet.apis import inference_detector, init_detector, show_result_pyplot
 
-
 def main():
     parser = ArgumentParser()
     parser.add_argument('img', help='Image file')

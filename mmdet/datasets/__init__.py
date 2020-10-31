@@ -9,10 +9,11 @@ from .xml_style import XMLDataset
 from .utils import replace_ImageToTensor
 from .voc_cocoformat import VOC_CocoFormat
 from .widerface_cocoformat import WiderFace_CocoFormat
+from .voc_remotesense import VOC_RemoteSense
 
 __all__ = [
     'CustomDataset', 'XMLDataset', 'CocoDataset', 'VOC_CocoFormat',
     'VOCDataset', 'GroupSampler', 'WiderFace_CocoFormat',
     'build_dataloader', 'ConcatDataset', 'RepeatDataset', 'WIDERFaceDataset', 'DATASETS', 'PIPELINES',
-    'build_dataset', 'replace_ImageToTensor'
+    'build_dataset', 'replace_ImageToTensor','VOC_RemoteSense'
 ]

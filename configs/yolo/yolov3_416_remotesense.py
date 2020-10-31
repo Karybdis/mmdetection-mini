@@ -11,13 +11,9 @@ model = dict(
         in_channels=[512, 256, 128],
         anchor_generator=dict(
             type='YOLOAnchorGenerator',
-
-
-            base_sizes=[[(116, 90), (156, 198), (373, 326)],
-                        [(30, 61), (62, 45), (59, 119)],
-                        [(10, 13), (16, 30), (33, 23)]],
-
-
+            base_sizes=[[(15, 36), (45, 40), (162, 122)],
+                        [(6, 21), (8, 24), (7, 59)],
+                        [(4, 15), (35, 2), (6, 17)]],
             strides=[32, 16, 8]),
         bbox_coder=dict(type='YOLOBBoxCoder'),
         featmap_strides=[32, 16, 8],
@@ -52,9 +48,9 @@ test_cfg = dict(
 
 # dataset settings
 dataset_type = 'VOC_RemoteSense'
-data_root = '/home/pi/dataset/VOCdevkit/'
+data_root = '/home/fusion/ssc/VOC_Infrared'
 img_norm_cfg = dict(
-    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+    mean=[0,0,0], std=[255.,255.,255.], to_rgb=True)
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations', with_bbox=True),
